@@ -1,0 +1,23 @@
+{
+  "name": "eslint-config-vui",
+  "version": "0.0.1",
+  "description": "为 jquery-vui 内部开发量身定制的一套 eslint 规则",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shiguang0116/eslint-config-vui.git"
+  },
+  "keywords": [
+    "eslint"
+  ],
+  "author": "guang.shi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shiguang0116/eslint-config-vui/issues"
+  },
+  "homepage": "https://github.com/vuejs/eslint-config-vui#readme",
+  "peerDependencies": {
+    "eslint": "^2.0.0 || ^3.0.0",
+    "eslint-plugin-vue": "^1.0.0 || ^2.0.0"
+  }
+}
