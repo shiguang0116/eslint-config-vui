@@ -1,6 +1,6 @@
 # eslint-config-vui
 
-> 为 jquery-vui 内部开发量身定制的一套 eslint 规则（http://eslint.org）
+> 为 jquery-vui 内部开发量身定制的一套 eslint 规则（https://cn.eslint.org）
 
 ## 用法
 
