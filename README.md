@@ -4,12 +4,12 @@
 
 ## 用法
 
-1.npm下载
+#### 1、npm下载
 ```
 npm i -D eslint-config-vui
 ```
 
-2. 在项目中创建名为“.eslintrc”的文件
+#### 2、在项目中创建名为“.eslintrc”的文件
 
 ```javascript
 {
