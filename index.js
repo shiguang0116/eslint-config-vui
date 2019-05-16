@@ -7,7 +7,7 @@
 module.exports = {
   root: true,               // 停止在父级目录中寻找 .eslintrc.* | package.json 文件里的 eslintConfig
   parserOptions: {          // 解析器选项。帮助 ESLint 确定什么是解析错误，所有语言选项默认都是 false
-    parser: 'babel-eslint',
+    ecmaVersion: 2018,      // 支持 ES2018 规范
     sourceType: 'module',   // script (默认) | module（如果你的代码是 ECMAScript 模块)
     ecmaFeatures: {         // 想使用的额外的语言特性
       'jsx': true           // 启用 JSX
@@ -15,19 +15,18 @@ module.exports = {
   },
   env: {
     browser: true,          // 浏览器全局变量
-    node: true,
-    es6: true,              // 启用 ES6 语法支持
-    jquery: true            // jQuery 全局变量
+    node: true,             // Node.js 全局变量和 Node.js 作用域
+    es6: true               // 启用 ES6 语法支持 及 新的 ES6 全局变量
   },
   globals: {                // 定义全局变量。访问当前源文件内未定义的变量时，no-undef 规则将发出警告。如果你想在一个源文件里使用全局变量，推荐你在 ESLint 中定义这些全局变量，这样 ESLint 就不会发出警告了
-    template: false,        // false 不允许被重写
-    os: false,
-    _util: false,
-    _sv: false
+    Page: false,            // false 不允许被重写
+    template: false
   },
-  extends: ['eslint:recommended'],  // 一个配置文件可以从基础配置中继承已启用的规则，每个配置继承它前面的配置
+  plugins: [
+      'html'                // 需要检查 *.html 文件 里的js代码
+  ],
+  extends: '',              // 一个配置文件可以从基础配置中继承已启用的规则，每个配置继承它前面的配置
 
-  // 在此处添加自定义规则，此规则基于 https://cn.eslint.org/docs/rules/
   // 启用的规则及其各自的错误级别：
   // 'off' | 0    - 关闭规则
   // 'warn' | 1   - 开启规则，使用警告级别的错误：warn (不会导致程序退出)
@@ -41,9 +40,6 @@ module.exports = {
     'block-spacing': [2, 'always'],               // 禁止或强制在左花括号和同一行上的下一个 token 之间有一致的空格
     'brace-style': [2, 'stroustrup', {            // 强制在代码块中使用一致的大括号风格 1tbs|stroustrup（if-else中的else语句，连同catch 和 finally，都必须在右括号后另起一行）|allman
       'allowSingleLine': true                     // 允许块的开括号和闭括号在 同一行
-    }],
-    'camelcase': [0, {                            // 强制使用骆驼拼写法命名约定
-      'properties': 'always'
     }],
     'comma-dangle': [2, 'never'],                 // 要求或禁止末尾逗号 never|always|always-multiline
     'comma-spacing': [2, {                        // 强制在逗号前后使用一致的空格
