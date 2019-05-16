@@ -6,7 +6,7 @@
 
 #### 1、npm下载
 ```
-npm i -D eslint-config-vui
+npm i -D eslint-config-vui eslint-plugin-html
 ```
 
 #### 2、在 .eslintrc 文件中添加代码

@@ -146,7 +146,8 @@ module.exports = {
     'no-unsafe-finally': 2,                       // 禁止在 finally 语句块中出现控制流语句
     'no-unused-vars': [2, {                       // 禁止出现未使用过的变量
       'vars': 'all',                              // 检测所有变量，包括全局环境中的变量
-      'args': 'none'                              // 参数可以不使用
+      'args': 'none',                             // 参数可以不使用
+      'varsIgnorePattern': 'Page'                 // 不需要检测的变量：变量名称匹配正则模式       
     }], 
     'no-useless-call': 2,                         // 禁止不必要的 .call() 和 .apply()
     'no-useless-computed-key': 2,                 // 禁止在对象中使用不必要的计算属性
