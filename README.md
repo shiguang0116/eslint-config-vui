@@ -9,11 +9,12 @@
 npm i -D eslint-config-vui
 ```
 
-#### 2、在项目中创建名为“.eslintrc”的文件
+#### 2、在 .eslintrc 文件中添加代码
 
 ```javascript
 {
-  "extends": "vui"
+  "extends": "vui",
   // 你的规则（覆盖）
+  "rules": {}
 }
 ```
