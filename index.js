@@ -159,7 +159,15 @@ module.exports = {
             "initialized": "never",                   // 要求每个作用域的初始化的变量有多个变量声明
             "uninitialized": "consecutive"            // 对未初始化的变量，要求其连续的变量声明合并为一个声明
         }],
-        'operator-linebreak': [2, 'before'],          // 强制操作符使用一致的换行符风格 after|before|none 和 overrides对象
+        'operator-linebreak': [2, 'after', {          // 强制操作符使用一致的换行符风格 after|before|none
+            'overrides': {                            // 盖对指定的操作的全局设置
+                '?': 'before',
+                ':': 'before',
+                '&&': 'before',
+                '||': 'before'
+            }
+        }],
+        'operator-linebreak': [2, 'before'],          
         'padded-blocks': [2, 'never'],                // 禁止或要求块内填充 never|always
         'quotes': [2, 'single', {                     // 强制使用一致的反勾号、双引号或单引号
             'avoidEscape': true,                      // 允许字符串使用单引号或双引号，只要字符串中包含了一个其它引号，否则需要转义
