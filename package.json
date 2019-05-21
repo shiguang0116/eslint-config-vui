@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-vui",
-  "version": "0.2.6",
+  "version": "1.0.0",
   "description": "为 jquery-vui 内部开发量身定制的一套 eslint 规则",
   "main": "index.js",
   "repository": {

@@ -22,9 +22,6 @@ module.exports = {
         Page: false,            // false 不允许被重写
         template: false
     },
-    plugins: [
-        'html'                  // 需要检查 *.html 文件 里的js代码
-    ],
     extends: '',                // 一个配置文件可以从基础配置中继承已启用的规则，每个配置继承它前面的配置
 
     // 启用的规则及其各自的错误级别：
